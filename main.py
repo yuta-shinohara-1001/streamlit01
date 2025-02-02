@@ -4,8 +4,8 @@ import streamlit as st
 # from PIL import Image
 import time
 
-st.title('Streamlit 入門')
-st.write('interactive')
+st.title('★Streamlit★')
+st.sidebar.write('interactive')
 
 latest_iteration = st.empty()
 bar = st.progress(0)
@@ -36,9 +36,9 @@ if button:
 expander = st.expander('問い合わせ')
 expander.write('問い合わせ内容を書く')
 
-text = st.text_input('あなたの趣味を教えて')
+text = st.sidebar.text_input('あなたの趣味を教えて')
 'あなたの趣味は、',text,'です。'
 
-condetion = st.slider('あなたの今の調子は？',0,100,50)
+condetion = st.sidebar.slider('あなたの今の調子は？',0,100,50)
 'あなたの調子は',condetion,'です。'
 
